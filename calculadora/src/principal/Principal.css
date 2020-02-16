@@ -1,0 +1,13 @@
+.principal{
+    height: 330px;
+    width: 220px;
+    border-radius: 2%;
+    background-color: #ffd6e9;
+    overflow: hidden;
+}
+.titulo{
+    color: rgb(1, 44, 94);
+    font-family: 'Amatic SC', cursive;
+    margin-left: 20px;
+    
+}
