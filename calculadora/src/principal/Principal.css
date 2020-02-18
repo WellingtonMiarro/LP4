@@ -4,6 +4,9 @@
     border-radius: 2%;
     background-color: #ffd6e9;
     overflow: hidden;
+
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
 }
 .titulo{
     color: rgb(1, 44, 94);

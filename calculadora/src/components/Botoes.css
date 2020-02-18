@@ -1,0 +1,14 @@
+.botao{
+    background-color:white;
+    font-size: 1em;
+    outline: none;
+    border: none;
+    border-bottom: solid 2px #555;
+    border-right: solid 2px #555;
+}
+.espaco{
+    grid-column: span 2;
+}
+.laranja{
+    background-color: rgb(255, 101, 11);
+}
