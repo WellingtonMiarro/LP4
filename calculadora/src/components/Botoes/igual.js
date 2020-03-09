@@ -1,5 +1,6 @@
 import React from 'react';
-import './Botoes.css';
+
+import igual from './icons/igual.png';
 
 export default props =>  // propriedade de um componente é passada como parametro 
     <button className=
@@ -9,9 +10,5 @@ export default props =>  // propriedade de um componente é passada como paramet
             ${props.laranja ?  'laranja' : ''}`}
         onClick={e =>(props.click && props.click(props.rotulo)) }>
             
-    
-        {props.rotulo}
+             <img src={igual} alt="Igual"/>    
     </button>
-
-
-

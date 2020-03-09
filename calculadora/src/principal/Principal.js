@@ -5,7 +5,18 @@ import './Principal.css';
 import Botoes from '../components/Botoes';
 import Display from '../components/Dispaly';
 
+//Import dos Boteos 
+import Soma from '../components/Botoes/soma';
+import Sub from '../components/Botoes/sub';
+import Mult from '../components/Botoes/mult';
+import Div from '../components/Botoes/div';
+import Mod from '../components/Botoes/mod';
+import Igual from '../components/Botoes/igual';
 
+
+
+
+//import soma from '../components/icons/soma.png';
 
 const estadoInicial = {
     valorExibido: '0',
@@ -44,6 +55,31 @@ export default class Principal extends Component{
                     valores[0] = valores[0] + valores[1];
                     valores[1] = 0;
                     break;
+
+                    //Operação de Subtração
+                    case'-':
+                    valores[0] = valores[0] - valores[1];
+                    valores[1] = 0;
+                    break;
+
+                    //Operação de Subtração
+                    case'x':
+                    valores[0] = valores[0] * valores[1];
+                    valores[1] = 0;
+                    break;
+
+                    //Operação de Divisao
+                    case'/':
+                    valores[0] = valores[0] / valores[1];
+                    valores[1] = 0;
+                    break;
+
+                     //Operação de Mode
+                     case'%':
+                     valores[0] = valores[0] % valores[1];
+                     valores[1] = 0;
+                     break;
+ 
 
                     default:
                         break;
@@ -88,23 +124,23 @@ export default class Principal extends Component{
             <div className='principal'>
                 <Display valor={this.state.valorExibido}/>
                 <Botoes rotulo="AC" espaco click={this.limpar}/>
-                <Botoes rotulo="%"  click={this.realizarOperacao}/>
-                <Botoes rotulo="/" laranja click={this.realizarOperacao}/>
+                <Mod rotulo="%"  click={this.realizarOperacao}/>
+                <Div rotulo="/" laranja click={this.realizarOperacao}/>
                 <Botoes rotulo="7" click={this.adicionarDigito}/>
                 <Botoes rotulo="8" click={this.adicionarDigito}/>
                 <Botoes rotulo="9" click={this.adicionarDigito}/>
-                <Botoes rotulo="x" laranja click={this.realizarOperacao}/>
+                <Mult rotulo="x" laranja click={this.realizarOperacao}/>
                 <Botoes rotulo="4" click={this.adicionarDigito}/>
                 <Botoes rotulo="5" click={this.adicionarDigito}/>
                 <Botoes rotulo="6" click={this.adicionarDigito}/>
-                <Botoes rotulo="-" laranja click={this.realizarOperacao}/>
+                <Sub rotulo="-" laranja click={this.realizarOperacao}/>
                 <Botoes rotulo="1" click={this.adicionarDigito}/>
                 <Botoes rotulo="2" click={this.adicionarDigito}/>
                 <Botoes rotulo="3" click={this.adicionarDigito}/>
-                <Botoes rotulo="+" laranja click={this.realizarOperacao}/>
+                <Soma rotulo="+" laranja click={this.realizarOperacao}/>
                 <Botoes rotulo="0" espaco click={this.adicionarDigito}/>
                 <Botoes rotulo="." click={this.adicionarDigito}/>
-                <Botoes rotulo="="laranja click={this.realizarOperacao}/>
+                <Igual rotulo="="laranja click={this.realizarOperacao}/>
                 
             </div>
         )
