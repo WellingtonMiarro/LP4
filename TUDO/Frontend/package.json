@@ -1,11 +1,11 @@
 {
-  "name": "Frontend",
+  "name": "fontend",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --progress --colors --inline --hot",
-    "production": "webpack-dev-server --progress -p"
+    "production": "wepack-dev-server --progress -p"
   },
   "keywords": [],
   "author": "",
