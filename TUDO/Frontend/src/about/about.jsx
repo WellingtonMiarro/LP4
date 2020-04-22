@@ -1,7 +1,8 @@
-import React from 'react'
+import React from 'react';
+import PageHeader from '../tamplete/pageHearder';
 
 export default props => (
     <div>
-        <h1>SOBRE</h1>
+        <PageHeader name="Sobre" small="Nós"></PageHeader>
     </div>
 );
