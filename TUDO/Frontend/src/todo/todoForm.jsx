@@ -8,7 +8,7 @@ import Button from '../tamplete/iconButton';
  */
 
 export default props => (
-    <div role="from" className="todoFrom">
+    <div role="from" className="todoForm">
         <Grid cols='12 9 10'>
             <input 
             id='description' 
@@ -20,6 +20,8 @@ export default props => (
         
         <Grid cols='12 3 2'>   
             <Button style="primary" icon='plus' onClick={props.handleAdd}></Button>
+            <Button style="info" icon='search' onClick={props.handleSearch}></Button>
+            <Button style="default" icon='close' onClick={props.handleClear}></Button>
         </Grid>
     </div>
 );
