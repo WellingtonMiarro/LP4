@@ -5,7 +5,8 @@ import axios from 'axios';
 import TodoForm from './todoForm';
 import TodoList from './todoList';
 
-const URL = 'http://localhost:3001/api/todos'
+const URL = 'http://localhost:3001/api/todos';
+const URL_JAVA = 'http://localhost:8081/api/javatodos/'
 
 export default class Todo extends Component {
     constructor(props){
@@ -42,7 +43,7 @@ export default class Todo extends Component {
     //função de adicionar 
     handleAdd(){
         const description = this.state.description;
-        axios.post(URL, {description})
+        axios.post(URL_JAVA, {description})
         .then( resp => this.refrech());//adicionou? ele atualiza!!!
     }
     handleRemove(todo){
