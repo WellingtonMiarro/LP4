@@ -7,6 +7,7 @@ public interface TodoService {
 	List<Todo> findAll();
 	
 	void saveOrUpdate(Todo todo);
-	//void deleteTodo(String id);
+	void delete(String id);
+	void update(String id, Todo todo);
 
 }

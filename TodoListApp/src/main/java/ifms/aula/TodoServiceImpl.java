@@ -1,6 +1,7 @@
 package ifms.aula;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,7 +14,6 @@ public class TodoServiceImpl implements TodoService {
 
 	@Override
 	public List<Todo> findAll() {
-		
 		return todoRepository.findAll();
 	}
 
@@ -23,4 +23,15 @@ public class TodoServiceImpl implements TodoService {
 		
 	}
 
+	@Override
+	public void delete(String id) {
+		todoRepository.deleteById(id);
+		
+	}
+	@Override
+	public void update(String id, Todo todo){
+		todoRepository.deleteById(id);
+		todoRepository.save(todo);
+	}
+	
 }
