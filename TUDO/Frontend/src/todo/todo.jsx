@@ -6,7 +6,7 @@ import TodoForm from './todoForm';
 import TodoList from './todoList';
 
 const URL = 'http://localhost:3001/api/todos';
-const URL_JAVA = 'http://localhost:8081/api/javatodos/'
+const URL_JAVA = 'http://localhost:8081/api/javatodos/'; //Backend em Java
 
 export default class Todo extends Component {
     constructor(props){
@@ -45,18 +45,18 @@ export default class Todo extends Component {
         .then( resp => this.refrech());//adicionou? ele atualiza!!!
     }
     handleRemove(todo){
-        axios.delete(`${URL}/${todo._id}`)
+        axios.delete(`${URL_JAVA}/${todo._id}`)
         .then( resp => this.refrech());
     }
     handleClear(){
         this.refrech()
     }
     handleMarkAsDone(todo){
-        axios.put(`${URL}/${todo._id}`, {...todo, done: true})
+        axios.put(`${URL_JAVA}/${todo._id}`, {...todo, done: true})
         .then( resp => this.refrech(this.state.description));
     }
     handleMarkAsPending(todo){
-        axios.put(`${URL}/${todo._id}`, {...todo, done: false})
+        axios.put(`${URL_JAVA}/${todo._id}`, {...todo, done: false})
         .then( resp => this.refrech(this.state.description));
     }
 
